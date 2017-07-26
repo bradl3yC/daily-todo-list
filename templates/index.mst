@@ -6,6 +6,13 @@
     <title></title>
   </head>
   <body>
-
+    <form action="/" method="post">
+      <input type="text" name="todo" placeholder="Enter a task" />
+      <button type="submit">Submit</button>
+      <ul>
+        {{#todos}}
+        <li>{{body}}</li>
+        {{/todos}}
+      </ul>
   </body>
 </html>

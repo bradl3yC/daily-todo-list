@@ -1,15 +1,12 @@
 const fs = require('fs')
+let existingToDos
+let isChecked
 
-const addToDo = (title, body) => {
-  let todos = [];
-  let todo = { todo };
-
-  todos.push(todo);
-  fs.writeFileSync('todos.json', JSON.stringify(todos));
-
-  const existingToDos = fs.readFileSync('todos.json');
-  notes = JSON.parse(existingToDos);
-
+const addToDo = (body, isChecked = false) => {
+  let todo = { body, isChecked }
+  existingToDos = JSON.parse(fs.readFileSync('./todos.json', 'utf8'));
+  existingToDos.todos.push(todo);
+  fs.writeFileSync('./todos.json', JSON.stringify(existingToDos))
 };
 
-module.exports = { addToDo }
+module.exports = { addToDo, existingToDos }
