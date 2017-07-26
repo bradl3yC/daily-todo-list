@@ -1,1 +1,1 @@
-{"todos":[{"body":"test","isChecked":false,"id":1}]}
+{"todos":[{"body":"test","isChecked":"unchecked","id":1},{"body":"test 2","isChecked":"unchecked","id":2},{"body":"somestuff","isChecked":"checked","id":3}]}
