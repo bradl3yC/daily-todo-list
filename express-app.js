@@ -6,7 +6,6 @@ const existingToDos = require('./todos.json')
 const app = express()
 // const todos = require('./todos.js')
 
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
