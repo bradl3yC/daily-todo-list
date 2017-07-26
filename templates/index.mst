@@ -10,14 +10,19 @@
       <input type="text" name="todo" placeholder="Enter a task" />
       <button type="submit">Submit</button>
     </form>
-      <ul>
-        {{#todos}}
-        <li class={{isChecked}}>{{body}} |
+    <table>
+      {{#todos}}
+      <tr>
+        <td>
+          <span class="{{isChecked}}">{{body}}</span>
+        </td>
+        <td>
           <form action="/complete/{{id}}" method="post">
             <button type="submit">Complete
           </form>
-          </li>
-        {{/todos}}
-      </ul>
+        </td>
+      </tr>
+      {{/todos}}
+    </table>
   </body>
 </html>
