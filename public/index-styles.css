@@ -1,7 +1,44 @@
-.checked {
-  text-decoration: line-through;
+body {
+  font-family: 'Indie Flower', cursive;
 }
 
-ul {
-  list-style: none;
+.todo-list {
+  width: 500px;
+  border: 1px solid #ccc;
+  padding: 1em;
+  border-radius: 5px;
+  margin-left: 5em;
+}
+
+.checked {
+  text-decoration: line-through;
+  border: 1px solid black;
+  font-weight: bold;
+}
+
+input {
+  width: 350px;
+  height: 20px;
+  border: none;
+  background-color: #ccc;
+  color: #666;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #4286f4;
+  border: none;
+  border-radius: 5px;
+  width: 75px;
+  height: 25px;
+}
+
+.top-h2 {
+  margin-top: 0px;
+}
+
+tr td:nth-child(odd){
+  width: 300px;
+  background-color: #ccc;
+  border-radius: 5px;
 }

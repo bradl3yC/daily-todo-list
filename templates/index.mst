@@ -3,18 +3,23 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="/index-styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     <title></title>
   </head>
   <body>
+    <h1>To Do:</h1>
+    <div class="todo-list">
+      <h2 class="top-h2">Create a task:</h2>
     <form action="/create" method="post">
       <input type="text" name="todo" placeholder="Enter a task" />
       <button type="submit">Submit</button>
     </form>
+    <h2>Tasks:</h2>
     <table>
       {{#todos}}
       <tr>
-        <td>
-          <span class="{{isChecked}}">{{body}}</span>
+        <td class="{{isChecked}}">
+          <span>{{body}}</span>
         </td>
         <td>
           <form action="/complete/{{id}}" method="post">
@@ -24,5 +29,6 @@
       </tr>
       {{/todos}}
     </table>
+  </div>
   </body>
 </html>
